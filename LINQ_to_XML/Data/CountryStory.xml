@@ -2655,8 +2655,8 @@
         <nom>Saad</nom>
         <prenom>Carine</prenom>
         <email>carine.saad@ua.edu.lb</email>
-        <username>CarineSaad</username>
-        <mot_de_passe>Carine</mot_de_passe>
+        <username>username</username>
+        <mot_de_passe>password</mot_de_passe>
         <telephone>
           <code>+961</code>
           <telephone>3 854 486</telephone>
