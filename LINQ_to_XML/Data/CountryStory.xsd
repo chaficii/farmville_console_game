@@ -1,0 +1,1355 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="categorie">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TVA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="categorie" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="string-array">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="item" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoV">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+          <xs:attribute type="xs:string" name="size" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="font">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+          <xs:attribute type="xs:string" name="nom" use="optional"/>
+          <xs:attribute type="xs:byte" name="numero" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="Rouge" type="xs:short"/>
+  <xs:element name="Vert" type="xs:short"/>
+  <xs:element name="Bleu" type="xs:short"/>
+  <xs:element name="melangeCouleur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="Rouge"/>
+        <xs:element ref="Vert"/>
+        <xs:element ref="Bleu"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="numero" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icon">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+          <xs:attribute type="xs:string" name="size" use="optional"/>
+          <xs:attribute type="xs:string" name="nom" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LogoV" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fontFamily">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="font" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="couleur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="melangeCouleur" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="icons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="icon" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="financiere">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TVA"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryCodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="string-array" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>country list</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="infographique">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="logo"/>
+        <xs:element ref="fontFamily"/>
+        <xs:element ref="couleur"/>
+        <xs:element ref="icons"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="provider" type="xs:string"/>
+  <xs:element name="brand" type="xs:string"/>
+  <xs:element name="MaturityTime">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:short">
+          <xs:attribute type="xs:string" name="TimeUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OverMaturityTime">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="TimeUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="edition">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="type" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textDescription" type="xs:string"/>
+  <xs:element name="levelToUnlock" type="xs:byte"/>
+  <xs:element name="amount" type="xs:byte"/>
+  <xs:element name="delayTime" type="xs:float"/>
+  <xs:element name="freeShipping" type="xs:string"/>
+  <xs:element name="shippingCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="originalPrice" type="xs:short"/>
+  <xs:element name="discount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="amount"/>
+        <xs:element ref="delayTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="shipping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="freeShipping"/>
+        <xs:element ref="shippingCost"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finalPrice">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:short">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlantCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WateringCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HarvestCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WateringCardinal" type="xs:byte"/>
+  <xs:element name="WaterCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnHarvestSeedCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="originalPrice" minOccurs="0"/>
+        <xs:element ref="discount" minOccurs="0"/>
+        <xs:element ref="shipping" minOccurs="0"/>
+        <xs:element ref="finalPrice"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Other_Costs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PlantCost" minOccurs="0"/>
+        <xs:element ref="WateringCost" minOccurs="0"/>
+        <xs:element ref="HarvestCost" minOccurs="0"/>
+        <xs:element ref="WateringCardinal" minOccurs="0"/>
+        <xs:element ref="WaterCost" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>how many times does it need to drink until it provides a producthow many times does it need to drink until it provides a producthow many times does it need to drink until it provides a product</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="UnHarvestSeedCost" minOccurs="0"/>
+        <xs:element ref="TreeTrimmingCost" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>every timeevery time</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="TreeCutCost" minOccurs="0"/>
+        <xs:element ref="FeedCost" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>every timeevery timeevery time</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="DemandCost" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+          <xs:attribute type="xs:string" name="seed_level" use="optional"/>
+          <xs:attribute type="xs:string" name="tree_level" use="optional"/>
+          <xs:attribute type="xs:string" name="pet_level" use="optional"/>
+          <xs:attribute type="xs:string" name="company_level" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="video">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageGallery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="image" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnimationPlay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="animation" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VideoScenes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="video"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="seeding" type="xs:byte"/>
+  <xs:element name="watering" type="xs:byte"/>
+  <xs:element name="harving" type="xs:byte"/>
+  <xs:element name="HarvestIncome" type="xs:byte"/>
+  <xs:element name="MoneyIncome">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XP_Gain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="seeding" minOccurs="0"/>
+        <xs:element ref="watering" minOccurs="0"/>
+        <xs:element ref="harving"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seed_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="provider"/>
+        <xs:element ref="brand"/>
+        <xs:element ref="MaturityTime"/>
+        <xs:element ref="OverMaturityTime"/>
+        <xs:element ref="edition"/>
+        <xs:element ref="textDescription">
+          <xs:annotation>
+            <xs:documentation>comming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited editioncomming soon, limited edition</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="levelToUnlock"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="price"/>
+        <xs:element ref="Other_Costs" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seed_Media">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImageGallery"/>
+        <xs:element ref="AnimationPlay"/>
+        <xs:element ref="VideoScenes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Incomes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="HarvestIncome"/>
+        <xs:element ref="MoneyIncome">
+          <xs:annotation>
+            <xs:documentation>45 apples45 apples45 apples45 apples</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="XP_Gain"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Seed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Seed_Data"/>
+        <xs:element ref="Cost"/>
+        <xs:element ref="Seed_Media"/>
+        <xs:element ref="Incomes"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="released_in_stock" use="optional"/>
+      <xs:attribute type="xs:byte" name="Seed_id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreeTrimmingCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TreeCutCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="limitAge">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="AgeUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="onCut_Wood_Producer" type="xs:byte"/>
+  <xs:element name="Young_Tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onCut_Wood_Producer">
+          <xs:annotation>
+            <xs:documentation>you have to water the tree, as it was producing 10 times... 10*45 = 450 minutes correct watering processyou have to water the tree, as it was producing 10 times... 10*45 = 450 minutes correct watering process</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Teenager_Tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onCut_Wood_Producer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Old_Tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="onCut_Wood_Producer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tree_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="provider"/>
+        <xs:element ref="brand"/>
+        <xs:element ref="MaturityTime"/>
+        <xs:element ref="OverMaturityTime"/>
+        <xs:element ref="edition"/>
+        <xs:element ref="textDescription">
+          <xs:annotation>
+            <xs:documentation>comming soon, limited editioncomming soon, limited edition</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="levelToUnlock">
+          <xs:annotation>
+            <xs:documentation>every 45 minutes, we need to water it, and to produce</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tree_Media">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImageGallery"/>
+        <xs:element ref="AnimationPlay"/>
+        <xs:element ref="VideoScenes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tree_Growth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Young_Tree"/>
+        <xs:element ref="Teenager_Tree"/>
+        <xs:element ref="Old_Tree"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Tree_Data"/>
+        <xs:element ref="Cost"/>
+        <xs:element ref="Tree_Media"/>
+        <xs:element ref="Tree_Growth"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="released_in_stock" use="optional"/>
+      <xs:attribute type="xs:short" name="Tree_id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FoodType" type="xs:string"/>
+  <xs:element name="FoodFrequency">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="TimeUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelieveryTime">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:float">
+          <xs:attribute type="xs:string" name="TimeUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Animal_Quantity" type="xs:byte"/>
+  <xs:element name="waterNeed">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="TimeUnit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeedNeed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FoodType"/>
+        <xs:element ref="FoodFrequency"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FeedCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="onSell_Back">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:short">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Young_Pet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Teenager_Pet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Old_Pet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pet_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="provider"/>
+        <xs:element ref="brand"/>
+        <xs:element ref="DelieveryTime"/>
+        <xs:element ref="Animal_Quantity"/>
+        <xs:element ref="MaturityTime"/>
+        <xs:element ref="edition"/>
+        <xs:element ref="textDescription">
+          <xs:annotation>
+            <xs:documentation>comming soon, limited edition</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="waterNeed"/>
+        <xs:element ref="FeedNeed">
+          <xs:annotation>
+            <xs:documentation>every 30 minutes, we need to water it, and to produceevery 30 minutes, we need to feed it</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="levelToUnlock"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pet_Media">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImageGallery"/>
+        <xs:element ref="AnimationPlay"/>
+        <xs:element ref="VideoScenes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pet_Growth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Young_Pet"/>
+        <xs:element ref="Teenager_Pet"/>
+        <xs:element ref="Old_Pet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Pet_Data"/>
+        <xs:element ref="Cost"/>
+        <xs:element ref="Pet_Media"/>
+        <xs:element ref="Pet_Growth"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="released_in_stock"/>
+      <xs:attribute type="xs:short" name="Pet_id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductType" type="xs:string"/>
+  <xs:element name="Branch_Quantity" type="xs:byte"/>
+  <xs:element name="Demand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ProductType"/>
+        <xs:element ref="FoodFrequency"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DemandCost">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="family_company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="village_company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="limitAge"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="international_company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Incomes"/>
+        <xs:element ref="Other_Costs"/>
+        <xs:element ref="onSell_Back"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Company_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="provider"/>
+        <xs:element ref="brand"/>
+        <xs:element ref="DelieveryTime"/>
+        <xs:element ref="Branch_Quantity"/>
+        <xs:element ref="MaturityTime"/>
+        <xs:element ref="edition"/>
+        <xs:element ref="textDescription">
+          <xs:annotation>
+            <xs:documentation>comming soon, limited edition</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="Demand"/>
+        <xs:element ref="levelToUnlock"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Company_Media">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImageGallery"/>
+        <xs:element ref="AnimationPlay"/>
+        <xs:element ref="VideoScenes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="company_evolution">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="family_company"/>
+        <xs:element ref="village_company"/>
+        <xs:element ref="international_company"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Company">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Company_Data"/>
+        <xs:element ref="Cost"/>
+        <xs:element ref="Company_Media"/>
+        <xs:element ref="company_evolution"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="released_in_stock"/>
+      <xs:attribute type="xs:short" name="Company_id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Gadget_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="provider"/>
+        <xs:element ref="brand"/>
+        <xs:element ref="DelieveryTime"/>
+        <xs:element ref="Branch_Quantity"/>
+        <xs:element ref="edition"/>
+        <xs:element ref="textDescription"/>
+        <xs:element ref="levelToUnlock"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Gadget_Media">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImageGallery"/>
+        <xs:element ref="AnimationPlay"/>
+        <xs:element ref="VideoScenes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Gadget">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Gadget_Data"/>
+        <xs:element ref="Cost"/>
+        <xs:element ref="Gadget_Media"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="released_in_stock"/>
+      <xs:attribute type="xs:short" name="Gadget_id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialItem_Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="specialItem_Data"/>
+        <xs:element ref="Cost"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="specialItem_id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fertilizers" type="xs:string"/>
+  <xs:element name="super_fertilizers" type="xs:string"/>
+  <xs:element name="seeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Seed" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Tree" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>>tefe7, cacao (limited!!!!), njas, meshmoush, pecan, cerise, laymoun, remmen, sapin&lt;</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="animals">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Pet">
+          <xs:annotation>
+            <xs:documentation>>kharouf, ba2ra, djeje, na7el, doud azz&lt;</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="companies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Company"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="decoration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Gadget"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OtherItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="specialItem"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="receipies" type="xs:string"/>
+  <xs:element name="outfit">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="chemise" minOccurs="0"/>
+        <xs:element ref="pantalon" minOccurs="0"/>
+        <xs:element ref="chaussure" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="powers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fertilizers"/>
+        <xs:element ref="super_fertilizers"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extra" type="xs:string"/>
+  <xs:element name="lastEnergyUpdate" type="xs:string"/>
+  <xs:element name="refillFarmerEnergy">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="TimeUnit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lastWaterUpdate" type="xs:string"/>
+  <xs:element name="refillWater">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="TimeUnit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groundSize" type="xs:byte"/>
+  <xs:element name="MaximumWaterContainer" type="xs:byte"/>
+  <xs:element name="levelXPMax" type="xs:short"/>
+  <xs:element name="FarmerEnergyMax" type="xs:byte"/>
+  <xs:element name="LevelRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="groundSize"/>
+        <xs:element ref="MaximumWaterContainer"/>
+        <xs:element ref="levelXPMax"/>
+        <xs:element ref="FarmerEnergyMax"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GameClock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lastEnergyUpdate"/>
+        <xs:element ref="refillFarmerEnergy"/>
+        <xs:element ref="lastWaterUpdate"/>
+        <xs:element ref="refillWater"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Levels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LevelRule" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="produitId" type="xs:string"/>
+  <xs:element name="clientId" type="xs:string"/>
+  <xs:element name="marchandId" type="xs:string"/>
+  <xs:element name="quantiteOrdre" type="xs:string"/>
+  <xs:element name="prixFinalOrdre" type="xs:string"/>
+  <xs:element name="date" type="xs:string"/>
+  <xs:element name="ordre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="produitId"/>
+        <xs:element ref="clientId"/>
+        <xs:element ref="marchandId"/>
+        <xs:element ref="quantiteOrdre"/>
+        <xs:element ref="prixFinalOrdre"/>
+        <xs:element ref="date"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="code" type="xs:short"/>
+  <xs:element name="phone" type="xs:string"/>
+  <xs:element name="numero" type="xs:string"/>
+  <xs:element name="apartement" type="xs:string"/>
+  <xs:element name="boitePostal" type="xs:string"/>
+  <xs:element name="autre" type="xs:string"/>
+  <xs:element name="pays" type="xs:string"/>
+  <xs:element name="nomComplet" type="xs:string"/>
+  <xs:element name="route">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="numero"/>
+        <xs:element ref="apartement"/>
+        <xs:element ref="boitePostal"/>
+        <xs:element ref="autre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="village" type="xs:string"/>
+  <xs:element name="ville" type="xs:string"/>
+  <xs:element name="etat" type="xs:string"/>
+  <xs:element name="zip" type="xs:string"/>
+  <xs:element name="telephone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="code"/>
+        <xs:element ref="phone"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addresse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="pays"/>
+        <xs:element ref="nomComplet"/>
+        <xs:element ref="route"/>
+        <xs:element ref="village"/>
+        <xs:element ref="ville"/>
+        <xs:element ref="etat"/>
+        <xs:element ref="zip"/>
+        <xs:element ref="telephone"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prenom" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="username" type="xs:string"/>
+  <xs:element name="mot_de_passe" type="xs:string"/>
+  <xs:element name="mes_addresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="addresse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="photoProfile">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="src"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visa" type="xs:string"/>
+  <xs:element name="forme">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="skinColor">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="yeux">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="styleCheveux">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chemise">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+          <xs:attribute type="xs:string" name="couleur"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pantalon">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+          <xs:attribute type="xs:string" name="couleur"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chaussure">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+          <xs:attribute type="xs:string" name="couleur"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="etageChemise" type="xs:string"/>
+  <xs:element name="etagePantalon" type="xs:string"/>
+  <xs:element name="etageChaussure" type="xs:string"/>
+  <xs:element name="montre">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collier">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sacAdos">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="id"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="etageMontre" type="xs:string"/>
+  <xs:element name="etageCollier" type="xs:string"/>
+  <xs:element name="etageSacAdos" type="xs:byte"/>
+  <xs:element name="alias" type="xs:string"/>
+  <xs:element name="sexe" type="xs:string"/>
+  <xs:element name="body">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="forme"/>
+        <xs:element ref="skinColor"/>
+        <xs:element ref="yeux"/>
+        <xs:element ref="styleCheveux"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="armoire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="etageChemise"/>
+        <xs:element ref="etagePantalon"/>
+        <xs:element ref="etageChaussure"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accessoire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="montre"/>
+        <xs:element ref="collier"/>
+        <xs:element ref="sacAdos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="armoireAutre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="etageMontre"/>
+        <xs:element ref="etageCollier"/>
+        <xs:element ref="etageSacAdos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Level" type="xs:byte"/>
+  <xs:element name="XP" type="xs:short"/>
+  <xs:element name="Coins">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:short">
+          <xs:attribute type="xs:string" name="CurrencyUnit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Money">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:byte">
+          <xs:attribute type="xs:string" name="CurrencyUnit"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Energy" type="xs:byte"/>
+  <xs:element name="Water" type="xs:byte"/>
+  <xs:element name="idPickedItem" type="xs:byte"/>
+  <xs:element name="x" type="xs:byte"/>
+  <xs:element name="y" type="xs:byte"/>
+  <xs:element name="dateIntro" type="xs:string"/>
+  <xs:element name="RessourceDone" type="xs:byte"/>
+  <xs:element name="statusItem" type="xs:string"/>
+  <xs:element name="pickedItem">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="idPickedItem"/>
+        <xs:element ref="x" minOccurs="0"/>
+        <xs:element ref="y" minOccurs="0"/>
+        <xs:element ref="dateIntro" minOccurs="0"/>
+        <xs:element ref="RessourceDone" minOccurs="0"/>
+        <xs:element ref="statusItem" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="usedPlace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="pickedItem" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="prenom"/>
+        <xs:element ref="email"/>
+        <xs:element ref="username"/>
+        <xs:element ref="mot_de_passe"/>
+        <xs:element ref="telephone"/>
+        <xs:element ref="mes_addresses"/>
+        <xs:element ref="photoProfile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paymentMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="visa"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="avatar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="alias"/>
+        <xs:element ref="sexe"/>
+        <xs:element ref="body"/>
+        <xs:element ref="outfit"/>
+        <xs:element ref="armoire"/>
+        <xs:element ref="accessoire"/>
+        <xs:element ref="armoireAutre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GameSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Level"/>
+        <xs:element ref="XP"/>
+        <xs:element ref="Coins"/>
+        <xs:element ref="Money"/>
+        <xs:element ref="Energy"/>
+        <xs:element ref="Water"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Garden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="usedPlace"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="client">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="bio"/>
+        <xs:element ref="paymentMethod"/>
+        <xs:element ref="avatar"/>
+        <xs:element ref="GameSettings"/>
+        <xs:element ref="Garden"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="politique">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="financiere"/>
+        <xs:element ref="CountryCodes"/>
+        <xs:element ref="infographique"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Shop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="seeds"/>
+        <xs:element ref="trees">
+          <xs:annotation>
+            <xs:documentation>>fejel, batenjen, tomato, fraise, batata, ame7, corn, flowers&lt;</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="animals"/>
+        <xs:element ref="companies">
+          <xs:annotation>
+            <xs:documentation>ma3mal:souf, jebne, wood</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="decoration"/>
+        <xs:element ref="OtherItems"/>
+        <xs:element ref="receipies"/>
+        <xs:element ref="outfit"/>
+        <xs:element ref="powers"/>
+        <xs:element ref="extra">
+          <xs:annotation>
+            <xs:documentation>payment men $ -> coins</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GameRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="GameClock"/>
+        <xs:element ref="Levels"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="caisse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ordre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clients">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="client"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryStory">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="politique"/>
+        <xs:element ref="Shop">
+          <xs:annotation>
+            <xs:documentation>> &lt;coupons> &lt;/coupons> &lt;</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="GameRules"/>
+        <xs:element ref="caisse"/>
+        <xs:element ref="clients"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="lang"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

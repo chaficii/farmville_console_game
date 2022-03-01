@@ -1,0 +1,38 @@
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe.config
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.pdb
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.exe
+C:\Users\User\Desktop\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.pdb
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe.config
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.exe
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.pdb
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.pdb
+C:\Users\User\Desktop\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.csprojResolveAssemblyReference.cache
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe.config
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.exe
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.pdb
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.pdb
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\mscorlib.dll
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\normidna.nlp
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\normnfc.nlp
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\normnfd.nlp
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\normnfkc.nlp
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\normnfkd.nlp
+E:\XML\tp 17-18\tp.chapitre.2\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.csprojResolveAssemblyReference.cache
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe.config
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\bin\Debug\LINQ_to_XML.pdb
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.csprojResolveAssemblyReference.cache
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.csproj.CoreCompileInputs.cache
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.exe
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\cours\seance 3\tp.chapitre.2\LINQ_to_XML\LINQ_to_XML\obj\Debug\LINQ_to_XML.pdb
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe.config
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\bin\Debug\LINQ_to_XML.exe
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\bin\Debug\LINQ_to_XML.pdb
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\obj\Debug\LINQ_to_XML.csprojResolveAssemblyReference.cache
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\obj\Debug\LINQ_to_XML.csproj.CoreCompileInputs.cache
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\obj\Debug\LINQ_to_XML.exe
+D:\Université Antonine UA\Semestre 5 - Fall 2017 2018\XML et Architecture Logicielle Distribuée - Carine Saad (1 credit)\projet\Projet LINQ\LINQ_to_XML\obj\Debug\LINQ_to_XML.pdb
